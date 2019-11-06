@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
 
     public Rigidbody myRigidbody;
     public float speed;
+    
+    public Text scoreText;
 
     int score;
 
@@ -33,14 +36,14 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //Comporo el tag del objeto contra el que he colisionado; para desactivarlo solo en el caso de que sea un Pickup
+        //Comparo el tag del objeto contra el que he colisionado; para desactivarlo solo en el caso de que sea un Pickup
         if (other.gameObject.CompareTag("Pickup"))
         {
             //Si es Pickup, lo descativo
             other.gameObject.SetActive(false);
 
             score += other.gameObject.GetComponent<Pickup>().points;
-            Debug.Log("Mi puntación es: " + score);
+            scoreText.text = "Score = " + score;
         }
     }
 }
