@@ -610,7 +610,7 @@ PlayerSettings:
   facebookStatus: 1
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
-  apiCompatibilityLevel: 6
+  apiCompatibilityLevel: 2
   cloudProjectId: 9c827ca7-fedb-48b4-b236-b087e0b16838
   framebufferDepthMemorylessMode: 0
   projectName: Roll a ball
